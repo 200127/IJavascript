@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                                    
+
+    <!-- 
+        <script>    数组1 
+            //var arr = new Array("1","2","3");
+            var arr = [123,223,333,443]
+            arr[0] = 111;
+            alert(arr);
+        </script> 
+    -->
+    
+    <!--             
+            <script>查询是否是数组两种方法 
+                var arr = [1,2,3,4,5,6];
+                var a = 1;
+                alert(arr instanceof Array);
+                alert(Array.isArray(a));
+            </script>
+    -->
+
+
+    <!-- <script>
+        var arr = [1,2,3,4,5];
+        alert(Array.isArray(arr.valueOf()));
+    </script> -->
+
+
+
+
+
+    <!-- <script>
+        //数组重写
+        var arr = [1,2,3,4,5,6,"秋",true];
+
+
+        //Array.prototype.joinplus = function(f){
+        //     if(f == "" || f == null || f == undefined){
+        //         f = ",";
+        //     }
+        //     var str = "";
+        //     for(var i=0;i<this.length;i++){
+        //         str += String(this[i]);
+        //         if(i != this.length-1){
+        //             str += f; //追加分隔符
+        //         }
+        //     }
+        //     return str;
+        // }
+
+
+        // function joinplus(arr,f){
+        //     if(f == "" || f == null || f == undefined){
+        //         f = ",";
+        //     }
+        //     var str = "";
+        //     for(var i=0;i<arr.length;i++){
+        //         str += String(arr[i]);
+        //         if(i != arr.length-1){
+        //             str += f; //追加分隔符
+        //         }
+        //     }
+        //     return str;
+        // }
+
+        // alert(joinplus(arr,"$$"));
+    </script> -->
+    <!-- <script>
+        // 数组push
+        var arr = new Array(1,2,3);
+        // arr.push(6,"黄");
+        // alert(arr);
+
+        Array.prototype.pushplus = function(){
+            for(var i =0;i<arguments.length;i++){
+                this[this.length] = arguments[i];
+            }
+            return this.length;
+        }
+        function pushplus02(obj,arr){
+            for(var i = 0;i<arr.length;i++){
+                obj[obj.length] = arr[i];
+            }
+            return obj.length;
+        }
+        var xr = ["aaa","bbb","dad"];
+        pushplus02(arr,xr);
+        alert(arr);
+    </script> -->
+
+
+    <!-- <script>
+        var arr = ["aa","bb","cc"];
+        
+        // Array.prototype.popplus = function(){
+        //     var a = this[this.length-1];
+        //     this.length = this.length-1;
+        //     return a;
+        // }
+
+        function popplus(arr){
+            var a = arr[arr.length-1];
+            arr.length = arr.length-1;
+            return a;
+        }
+        popplus(arr);
+        alert(arr);
+    </script> -->
+
+
+    <!-- <script>
+        var a = [1,2,3,4,5];
+        // var x = a.shift();
+        // alert(a+"--"+x);
+        // alert(a.length);
+
+
+        // Array.prototype.shiftplus = function(){
+        //     if(this.length == 0){        //完全可以忽略
+        //         return undefined;
+        //     }else{
+        //         var a = this[0];
+        //         for(var i=0;i<this.length-1;i++){
+        //             this[i] = this[i+1];
+        //         }
+        //         this.length = this.length-1;
+        //         return a;
+        //     }
+        // }
+
+
+        function shiftplus(a){
+            if(a.length==0){
+                return undefined;
+            }else{
+                var first = a[0];
+                for(var i=0;i<a.length-1;i++){
+                    a[i] = a[i+1];
+                }
+                a.length = a.length-1;
+                return first;
+            }
+        }
+
+        shiftplus(a);
+        alert(a);
+    </script> -->
+
+
+
+    <!--unshift 向数组开头添加一个或多个元素-->
+    <!-- <script>
+        // var a = ["Javaes","Javascript","#317"];
+        // var b = a.unshift();
+        // alert(a+"--"+b);
+
+
+        //unshift方法重写
+        var a = [1,2,3,4,5]
+        function unshiftplus(ba,za){
+            for(var i=0;i<ba.length;i++){
+                za[za.length] = ba[i];
+            }
+            for(var j=0;j<za.length;j++){
+                ba[j] = za[j];
+            }
+            return ba.length;
+        }
+        unshiftplus(a,["java"]);
+        alert(a);
+    </script> -->
+
+    <!-- <script>
+        var arr = new Array(3);
+        arr[0] = 1;
+        arr[1] = 2;
+        arr[2] = 3;
+        // arr.push("java",true);
+        // arr.pop();
+        // arr.shift();
+        arr.unshift("添加");
+        alert(arr);
+    </script> -->
+
+    <!-- <script>
+        var a =[1,2,3,4,5,6];
+        // alert(a.splice(1));
+        // a.splice(1);
+        // alert(a);   
+        alert(Array.isArray(a.splice(1)));
+    </script> -->
+
+
+
+    <!-- <script>
+        var a = [1,2,3,4,5,6];
+        var b = a.reverse(); //返回数组的引用
+        alert(b == a);
+    </script> -->
+
+</body>
+</html>

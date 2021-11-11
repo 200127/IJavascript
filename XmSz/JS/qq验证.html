@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 530px;
+            height: 32px;
+            border: 2px solid #b61d1d;
+            margin: 80px auto;
+            overflow: hidden;
+        }
+        input{
+            width: 446.01px;
+            height: 30.01px;
+            float: left;
+            border: none;
+            outline: none;
+            text-indent: 1em;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            background: #b61d1d;
+            color:#fff;
+            float: left;
+            text-align: center;
+            line-height: 32px;
+            font-family: "微软雅黑";
+            font-size: 16px;
+            width: 80px;
+            height: 32px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <input type="text" id="inputtext">
+        <a href="javascrip:;" onclick="yanzheng()">验证</a>
+    </div>
+
+    <script type="text/javascript">
+        function yanzheng(){
+            var inputDom = document.getElementById("inputtext");
+            var str = inputDom.value;
+            var len = str.length;
+            if(len>=5 && len<=10){
+                for(var i=0;i<len;i++){
+                    var strCode = str.charCodeAt(i);
+                    if(strCode>57 || strCode<48){
+                        alert("你输入有非数字！");
+                        break;
+                    }else{
+                        if(i == len-1){
+                            alert("验证成功！");
+                        }
+                    }
+                }
+            }else{
+                alert("qq号的长度不正确！")
+            }
+        }
+    </script>
+    
+</body>
+</html>

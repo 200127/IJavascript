@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <script>
+
+    //    sort排序 
+
+        var arr = [16,25,34,3,32,11];
+        arr.sort(free);
+        alert(arr);
+        function free(a,b){  //规定记住
+            if(a<b){
+                return -1;
+            }else if(a>b){
+                return 1;
+            } else{
+                return 0;
+            }
+        }
+    </script> -->
+
+
+    <!-- <script>
+
+        //concat合并数组
+
+        var a = [1,2,3,4,5];
+        var b = ["java","c++"];
+        var c = a.concat("autumn",b);
+        alert(c[5]);
+    </script> -->
+
+
+
+    <!-- <script>
+
+        // 迭代函数every方法
+        var arr = [-1,2,3,4,5,6];
+        var flag = arr.every(function(items,index,array){
+            if(items<0){
+                return false;
+            }
+            return true;
+        });
+        if(!flag){
+            alert("数组不全大于0");
+        }
+    </script> -->
+
+
+                <!--
+                     every全部条件满足的时候true     
+                     some则有一个条件满足的时候true
+                -->
+
+    <!-- <script>
+        
+        // 迭代函数some()方法
+        var arr = [1,2,3,42,6];
+        var flag = arr.some(function(items,index,array){
+            return (items>500);
+        });
+        if(flag){
+            alert("数组里面有大于500的数");
+        }else{
+            alert("没有大于500的数")
+        }
+    </script> -->
+
+
+
+    <!-- <script>
+
+        // 迭代函数filter()方法
+        var arr = [1,2,3,4,25,23,66,55,52];
+        //要将arr数组里面的全部2去掉
+        var arr1 = arr.filter(function(items,index,array){
+            return items != 2;
+        });
+        alert(arr1);
+    </script> -->
+
+
+    <!-- <script>
+
+        // 迭代函数map()方法
+        var arr = [1,2,3,4,5,6];
+        var arr1 = arr.map(function(items,index,array){
+            return items * 2;
+        });
+        alert(arr1);
+    </script> -->
+
+
+
+    <!-- <script>
+
+        // 迭代函数forEach()方法
+        var arr = [1,2,3,4,5,6];
+        var arr1 = [];
+        arr.forEach(function(items,index,array){
+            arr1.push(items*6-8);
+        });
+        alert(arr1);
+    </script> -->
+</body>
+</html>

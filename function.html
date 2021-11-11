@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <script>
+        // function autumn(name){
+        //     alert(name);
+        // }
+        // function autumn(){
+        //     alert(1);
+        // }
+        // autumn("黄");   
+
+        // function sum(a,b){
+        //     //alert(a+b);
+        //     alert(a);
+        //     alert(b);
+        // }
+        // sum()
+        // //a.3  b.12 c.NaN d.报错
+
+
+
+        function autumn(a){
+            switch(a){
+                case 1:
+                    return 1;
+                    break;
+                case 2:
+                    return ;
+                    break;
+                default:
+                    return "没有找到数字！";
+            }
+            }
+            alert(autumn ("黄"));
+    </script> -->
+    
+
+
+
+    <!-- <script>
+        function autumn(a,b){  
+            //a=arguments[0],b=arguments[1]
+            alert(arguments[0]+arguments[1]);
+        }
+        autumn("[黄]","[autumn]");
+    </script> -->
+
+
+
+    <!-- <script>
+        function autumn(a){ //a
+            alert(a);
+        }
+        autumn(function(){
+            alert(1);
+        });
+    </script> -->
+
+
+
+    <!-- <script>
+        function autumn(){
+            var alength = arguments.length;
+            switch(alength){
+                case 0:
+                    alert("这里是没有参数的情况下执行的参数！");
+                    break;
+                case 1:
+                    alert("当参数只有一个的情况下执行这样的语句！");
+                    break;
+                case 2:
+                    alert("当参数只有两个的情况下执行这样的语句！");
+                    break;
+                default:
+                    alert("请你不要输入那么多的参数？");
+            }
+        }
+        autumn(1,2,4,5,6);
+    </script> -->
+
+
+
+
+
+    <script>
+        function autumn(){
+            var length = arguments.length;
+            if(length == 0){
+                alert("你没有传参数");
+            }else if(length == 1){
+                alert("你传了一个参数，是"+arguments[0]);
+            }else if(length == 2){
+                alert("你传了两个参数,分别是"+arguments[0]+","+arguments[1])
+            }else{
+                alert("你传了很多个参数，不行的哦")
+            }
+        }
+        autumn(1,2,3);
+    </script>
+</body>
+</html>

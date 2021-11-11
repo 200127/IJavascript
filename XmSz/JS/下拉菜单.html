@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #nav{
+            width: 1018px;
+            height: 37px;
+            background: #111;
+            margin: 5px auto;
+        }
+        ul>li{
+                list-style: none;
+                height: 37px;
+                padding: 0 30px 0 30px;
+                color: #aaa;
+                font: 15px "微软雅黑";
+                float: left;
+                border-right: 1px solid #444;
+                line-height: 37px;
+                cursor: pointer;
+                position: relative;top: 0;left: 0;
+        }
+        ul>li:nth-child(2) > span::after,ul>li:nth-child(3) > span::after{
+            content: "▼";
+            margin-left: 5px;
+            font-size: 12px;
+        }
+        ul>li span:hover{
+            color: #fff;
+        }
+        ol{
+            width: 100%;
+            background: #373737;
+            margin-top: -1px;
+            position: absolute;top: 37px;left: 0;
+            display: none;
+        }
+        ol>li{
+            list-style: none;
+            width: 100%;
+            height: 37px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="nav">
+        <ul id="ul">
+            <li><span>HOME</span></li>
+            <li><span>ARCHIVE</span>
+                <ol>
+                    <li>Sub item 1</li>
+                    <li>Sub item 2</li>
+                    <li>Sub item 3</li>
+                </ol>
+            </li>
+            <li><span>CATEGORIES</span>
+                <ol>
+                    <li>Sub item 1</li>
+                    <li>Sub item 2</li>
+                    <li>Sub item 3</li>
+                </ol>
+            </li>
+            <li><span>ABOUT</span></li>
+        </ul>
+    </div>
+    <script>
+        var ulDom = document.getElementById("ul");
+        var ulliDoms = ulDom.children;
+        for(var i=0;i<ulliDoms.length;i++){
+            if(i ==1 || i ==2){
+                ulliDoms[i].onmouseover = function(){
+                    this.children[0].style.color = "#fff";
+                    this.children[1].style.display = "block";
+                }
+                ulliDoms[i].onmouseout = function(){
+                    this.children[0].style.color = "#aaa";
+                    this.children[1].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

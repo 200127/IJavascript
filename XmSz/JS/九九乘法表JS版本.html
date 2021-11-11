@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td{
+            height:36px ;
+            text-align: center;
+            line-height: 36px;
+            background: #111;
+            color: #fff;
+            font-family: "微软雅黑";
+            border: 1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        window.onload = function(){
+            var thtml = "<table><tbody>";
+            for(var i=1;i<=9;i++){
+                thtml +="<tr>"
+                for(var j=1;j<=i;j++){
+                    thtml += "<td>"+i+" * "+j+ "=" +i*j+"</td>"
+                }
+                thtml += "</tr>";
+            }
+            thtml += "<tbody><table>";
+            
+            document.body.innerHTML = thtml
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: #111;
+            font-size: 30px;
+            color: #fff;
+            float: left;
+            margin-left: 2px;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+
+    <script>
+        var divDoms = document.body.children;//盒子对象   children是获取body的孩子的    
+        var arr = []; //空数组
+        for(var i=0;i<divDoms.length;i++){
+            arr.push(divDoms[i]);//将所有的盒子对象添加到数组里面去
+        }
+        arr.reverse();//反转所有的对象
+        for(var i=0;i<arr.length;i++){
+            document.body.appendChild(arr[i]);//循环盒子将所有盒子放到body里面
+        }
+    </script>
+
+</body>
+</html>

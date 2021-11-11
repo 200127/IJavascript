@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>验证案例</title>
+    <style>
+        #box{
+            width: 260px;
+            height: 200px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        <input type="text" id="text">
+        <button onclick="yanzheng()">提交</button>
+    </div>
+
+    <script>
+        function yanzheng(){
+            var textDom = document.getElementById("text");
+            var str = textDom.value.charCodeAt(0);
+            /*
+                && 是并且的意思也就是交集
+                || 是或者的意思也就是合并
+            */
+            if(str>=48 && str<=57){
+                alert("您输入的是一个数字")
+            }else{
+                alert("您输入的不是一个数字 ")
+            }
+        }
+
+
+    </script>
+</body>
+</html>
